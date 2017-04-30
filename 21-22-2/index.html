@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS_HW 21-22-2</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="js\template.js"></script>
+    <script src="js\dest\script.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+
+    <header>
+          <script type="text/template" id="header">
+          <% for (var i = 0; i < data.length; i++) { %>
+           <h1><%= data[i].title %></h1>
+          <% }; %>
+         </script>
+       </header>
+
+
+      <form name = "q1" class="question1" action="handler.php">
+      <script type="text/template" id="question1">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <h2><%= data[i].title %></h2>
+        <input type="radio" name="answer1" value="a1"><%= data[i].content %>1</input>
+        <br>
+        <input type="radio" name="answer1" value="a2"><%= data[i].content %>2</input>
+        <br>
+        <input type="radio" name="answer1" value="a3"><%= data[i].content %>3</input>
+        <% }; %>
+      </script>
+    </form>
+
+    <form name = "q2" class="question2" action="handler.php">
+    <script type="text/template" id="question2">
+      <% for (var i = 0; i < data.length; i++) { %>
+      <h2><%= data[i].title %></h2>
+      <input type="radio" name="answer2" value="a4" class="a1"><%= data[i].content %>1</input>
+      <br>
+      <input type="radio" name="answer2" value="a5"><%= data[i].content %>2</input>
+      <br>
+      <input type="radio" name="answer2" value="a6"><%= data[i].content %>3</input>
+      <% }; %>
+    </script>
+    </form>
+
+    <form name = "q3" class="question3" action="handler.php">
+    <script type="text/template" id="question3">
+      <% for (var i = 0; i < data.length; i++) { %>
+      <h2><%= data[i].title %></h2>
+      <input type="radio" name="answer3" value="a7"><%= data[i].content %>1</input>
+      <br>
+      <input type="radio" name="answer3" value="a8"><%= data[i].content %>2</input>
+      <br>
+      <input type="radio" name="answer3" value="a9"><%= data[i].content %>3</input>
+      <% }; %>
+    </script>
+    </form>
+
+    <div class="check">
+      <script type="text/template" id="check">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <button><%= data[i].content %></button>
+        <% }; %>
+      </script>
+    </div>
+
+  </body>
+
+</html>
